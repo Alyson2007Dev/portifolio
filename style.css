@@ -1,0 +1,341 @@
+body {
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+}
+
+
+header {
+  background: linear-gradient(-45deg, #660000, #990000, #cc0000, #ff1a1a);
+  background-size: 400% 400%;
+  animation: gradienteVermelho 10s ease infinite;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+
+section {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+
+h1 {
+  color: white;
+  margin: 0;
+}
+
+
+h2 {
+  background: linear-gradient(90deg, #ff0000, #ff66cc); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  text-fill-color: transparent;
+  margin: 0;
+}
+
+
+
+a {
+  color: #ff4c4c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff7777;
+}
+
+.perfil {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+ 
+ .botao {
+   display: block;
+   width: fit-content;
+   margin: 20px auto;
+   padding: 10px 20px;
+   background-color: #0055ff;
+   color: white;
+   border-radius: 8px;
+   text-decoration: none;
+   font-weight: bold;
+   transition: background-color 0.3s;
+}          
+
+.botao:hover {
+  background-color:#003bb3;
+}
+  
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}  
+
+.card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  padding: 20px;  
+  width: 300px;
+  text-align: center;
+  transition: tranform 0.3s, box-shadow 0.3s;
+}  
+
+.card:hover {
+   tranform: scale(1.05);
+   box-shadow: 0 0 20 px rgba(255,255,255,0.2)
+   }
+   
+.projeto1 {
+  background-image: url("https://picsum.photos/1200/800");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.imagem-projeto {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}  
+
+.projeto2 {
+  background-image: url("https://picsum.photos/1200/800");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  min-height: 100vh
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.conteudo {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  margin: 80px auto;
+  width: 600px;
+  max-width: 90%;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cards { 
+  display:flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}  
+
+.card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}  
+
+   
+@keyframes gradienteVermelho {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#toggle-tema {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 8px;
+   background-color: #444;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+}    
+
+#toggle-tema:hover {
+  background-color: #666;
+}
+
+body.claro {
+   background-color: #f0f0f0;
+   color: #111;
+   transition: background-color 0.5s, color 0.5s;
+}
+
+body.claro section {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.claro header {
+  background-color: #dddddd;
+  color: #000;
+}
+
+body.claro .card {
+  background-color: #ffffff;
+  color: #111;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.claro a {
+  color: #0077cc;
+}
+
+body.claro a:hover {
+  color: #004499;
+}
+   
+body.claro .botao {
+  background-color: #0077cc;
+  color: white;
+}
+
+body.claro .botao:hover {
+  background-color: #005999;
+}
+   
+body.claro h1 {
+  color: black;
+}  
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+ }
+
+  .card {
+   width: 90%;
+ }
+
+  #toggle-tema {
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+ }
+
+ header h1 {
+   font-size: 24px;
+ }
+
+ .perfil {
+   width: 100px;
+   height: 100px;
+ }
+}
+
+/* ======= MENU PADRÃO ======= */
+.navbar {
+  display: flex;
+  justify-content: flez-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  position: relative;
+  z-index: 999;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ff4c4c;
+}         
+          
+/* ======= BOTÃO DE MENU (CELULAR) ======= */     
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;    
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: none;
+  }
+  
+  .menu.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     transform: translateY(-10px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+}         

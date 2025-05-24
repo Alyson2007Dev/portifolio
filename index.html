@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portifólio do Alyson C</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="toggle-tema">🌙 Alterar Tema</button>
+ <nav class="navbar">
+   <sapan class="menu-toggle" id="menu-toggle">☰</span>
+   <ul class="menu" id="menu">
+     <li><a href="#sobre">Sobre</a></li>
+     <li><a href="#habilidades">Habilidades</a></li>
+     <li><a href="#projetos">Projetos</a></li>
+     <li><a href="#contatos">Contatos</a></li>
+   </ul>  
+  </nav>
+
+
+<script>
+  const botao = document.getElementById("toggle-tema");
+  const body = document.body;
+
+  // já define texto com base no tema atual
+  botao.textContent = body.classList.contains("claro")
+    ? "🌙 Modo Escuro"
+    : "☀️ Modo Claro";
+
+  botao.addEventListener("click", () => {
+    body.classList.toggle("claro");
+
+    botao.textContent = body.classList.contains("claro")
+      ? "🌙 Modo Escuro"
+      : "☀️ Modo Claro";
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>    
+
+  <header>
+    <h1>Olá, eu sou o Alyson</h1>
+    <p>Futuro desenvolvedor web</p>
+  </header>
+
+  <img src="alyson.jpg" alt="Foto de perfil" class="perfil">
+
+  <section>
+   <section id="sobre">...</section>
+    <h2>Sobre mim</h2>
+    <p>Sou um jovem apaixonado por tecnologia e jogos, sempre em busca de aprender coisas novas. Desde criança, o computador foi minha ferramenta favorita — seja para jogar, me conectar com pessoas ou explorar conteúdos criativos.</p>
+
+<p>No ensino médio, ainda não sabia qual caminho profissional seguir. Muitos falavam sobre faculdade, mas eu queria algo mais prático e dinâmico. Foi então que descobri a área de TI, onde encontrei a oportunidade perfeita: trabalhar com o que amo, direto do meu PC.</p>
+
+<p>Escolhi me tornar desenvolvedor pela liberdade de criar soluções inovadoras e pela flexibilidade de atuar remotamente. Atualmente, estou focado em aprimorar minhas habilidades em programação e transformar minha curiosidade em carreira..</p>
+  </section>
+
+  <section>
+   <section id="habilidades">...</section>
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML básico</li>
+      <li>CSS básico</li>
+      <li>Curioso e focado</li>
+    </ul>
+  </section>
+
+  <section>
+   <section id="projetos">...</section
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>📁 Projeto 1</h3>
+        <p>Esse foi meu primeiro projeto com HTML e CSS.</p>
+        <a href="projeto1.html" class="botao">Ver projeto</a>
+      </div>
+      
+      <div class="card">
+        <h3>🖥️ Projeto 2</h3>
+        <p>Um site responsivo que estou desenvolvendo.</p>
+        <a href="projeto2.html" class="botao">Ver projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+   <section id="contatos">...</section>
+    <h2>Contatos</h2>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a><br>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a><br>
+    <a href="https://github.com" target="_blank" class="botao">Ver meu GitHub</a>
+  </section>
+</body>
+</html>
+
